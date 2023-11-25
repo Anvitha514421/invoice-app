@@ -1,4 +1,4 @@
-package com.example.invoiceapp.ui.auth
+package com.invoice.app.ui.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

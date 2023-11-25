@@ -23,7 +23,7 @@ import com.invoice.app.data.Resource
 import com.invoice.app.ui.AppScreen
 import com.invoice.app.ui.commons.EmptyScreen
 import com.invoice.app.ui.commons.FullScreenProgressbar
-import com.invoice.app.ui.faker.FakeViewModelProvider
+import com.invoice.app.ui.fakers.FakeViewModelProvider
 import com.invoice.app.ui.theme.AppTheme
 import com.invoice.app.ui.utils.toast
 import com.invoice.app.R

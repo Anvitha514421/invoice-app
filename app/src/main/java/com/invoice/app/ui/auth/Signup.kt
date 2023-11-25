@@ -32,12 +32,12 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.invoiceapp.ui.auth.AuthViewModel
+import com.invoice.app.ui.auth.AuthViewModel
 import com.invoice.app.ui.theme.AppTheme
 import com.invoice.app.ui.theme.spacing
 import com.invoice.app.ui.AppScreen
 import com.invoice.app.ui.auth.home.HomeActivity
-import com.invoice.app.ui.faker.FakeViewModelProvider
+import com.invoice.app.ui.fakers.FakeViewModelProvider
 import com.invoice.app.ui.utils.startNewActivity
 import com.invoice.app.data.Resource
 import com.invoice.app.R
