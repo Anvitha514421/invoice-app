@@ -6,8 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.invoice.app.data.Resource
 import com.invoice.app.data.home.CustomersRepository
 import com.invoice.app.data.home.InvoiceRepository
-import com.invoice.app.data.home.MyBusinessRepository
-import com.invoice.app.data.home.TaxRepository
 import com.invoice.app.data.models.Business
 import com.invoice.app.data.models.Customer
 import com.invoice.app.data.models.Invoice
@@ -22,9 +20,9 @@ import javax.inject.Inject
 @HiltViewModel
 class InvoicesViewModel @Inject constructor(
     private val invoiceRepository: InvoiceRepository,
-    private val businessRepository: MyBusinessRepository,
+   // private val businessRepository: MyBusinessRepository,
     private val customersRepository: CustomersRepository,
-    private val taxRepository: TaxRepository
+   // private val taxRepository: TaxRepository
 ) : ViewModel() {
 
     val desc = MutableStateFlow("")
@@ -57,9 +55,9 @@ class InvoicesViewModel @Inject constructor(
 
     init {
         getInvoices()
-        getBusinesses()
+       // getBusinesses()
         getCustomers()
-        getTaxes()
+       // getTaxes()
     }
 
     private fun getInvoices() = viewModelScope.launch {
@@ -67,20 +65,20 @@ class InvoicesViewModel @Inject constructor(
         _invoices.value = invoiceRepository.getInvoices()
     }
 
-    private fun getBusinesses() = viewModelScope.launch {
-        _businesses.value = Resource.Loading
-        _businesses.value = businessRepository.getMyBusinesses()
-    }
+//    private fun getBusinesses() = viewModelScope.launch {
+//        _businesses.value = Resource.Loading
+//        _businesses.value = businessRepository.getMyBusinesses()
+//    }
 
     private fun getCustomers() = viewModelScope.launch {
         _customers.value = Resource.Loading
         _customers.value = customersRepository.getCustomers()
     }
 
-    private fun getTaxes() = viewModelScope.launch {
-        _taxes.value = Resource.Loading
-        _taxes.value = taxRepository.getTaxes()
-    }
+//    private fun getTaxes() = viewModelScope.launch {
+//        _taxes.value = Resource.Loading
+//        _taxes.value = taxRepository.getTaxes()
+//    }
 
     fun validateInputs() {
         var valid = true

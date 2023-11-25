@@ -3,18 +3,13 @@ package com.invoice.app.ui.fakers
 import com.invoice.app.data.Resource
 import com.invoice.app.ui.auth.AuthViewModel
 import com.invoice.app.ui.auth.home.customers.CustomersViewModel
-import com.invoice.app.ui.auth.home.dashboard.DashboardViewModel
 import com.invoice.app.ui.auth.home.invoices.InvoicesViewModel
 //import com.invoice.app.ui.auth.home.mybusinesses.MyBusinessesViewModel
 //import com.invoice.app.ui.auth.home.taxes.TaxesViewModel
 import com.invoice.app.data.home.CustomersRepository
-import com.invoice.app.data.home.DashboardRepository
 import com.invoice.app.data.home.InvoiceRepository
-import com.invoice.app.data.home.MyBusinessRepository
-import com.invoice.app.data.home.TaxRepository
 import com.invoice.app.data.models.Business
 import com.invoice.app.data.models.Customer
-import com.invoice.app.data.models.Dashboard
 import com.invoice.app.data.models.Invoice
 import com.invoice.app.data.models.Tax
 import com.google.firebase.auth.FirebaseUser
@@ -28,7 +23,7 @@ import com.invoice.app.data.auth.AuthRepository
 * */
 object FakeViewModelProvider {
 
-    fun provideInvoicesViewModel() = InvoicesViewModel(invoiceRepo, businessRepo, customersRepo, taxRepo)
+    fun provideInvoicesViewModel() = InvoicesViewModel(invoiceRepo, customersRepo)
 
     fun provideCustomersViewModel() = CustomersViewModel(customersRepo)
 
@@ -58,24 +53,7 @@ object FakeViewModelProvider {
 
     }
 
-    private val taxRepo = object : TaxRepository {
-        override suspend fun getTaxes(): Resource<List<Tax>> {
-            TODO("Not yet implemented")
-        }
 
-        override suspend fun addTax(tax: Tax): Resource<Tax> {
-            TODO("Not yet implemented")
-        }
-
-        override suspend fun updateTax(tax: Tax): Resource<Tax> {
-            TODO("Not yet implemented")
-        }
-
-        override suspend fun deleteTax(id: String): Resource<Boolean> {
-            TODO("Not yet implemented")
-        }
-
-    }
 
     private val customersRepo = object : CustomersRepository {
         override suspend fun getCustomers(): Resource<List<Customer>> {
@@ -96,27 +74,7 @@ object FakeViewModelProvider {
 
     }
 
-    private val businessRepo = object : MyBusinessRepository {
-        override suspend fun getMyBusinesses(): Resource<List<Business>> {
-            TODO("Not yet implemented")
-        }
 
-        override suspend fun canAddBusiness(): Boolean {
-            TODO("Not yet implemented")
-        }
-
-        override suspend fun addMyBusiness(business: Business): Resource<Business> {
-            TODO("Not yet implemented")
-        }
-
-        override suspend fun updateMyBusiness(business: Business): Resource<Business> {
-            TODO("Not yet implemented")
-        }
-
-        override suspend fun deleteMyBusiness(id: String): Resource<Boolean> {
-            TODO("Not yet implemented")
-        }
-    }
 
     private val authRepo = object : AuthRepository {
         override val currentUser: FirebaseUser?
