@@ -14,6 +14,10 @@ import com.invoice.app.data.models.Invoice
 import com.invoice.app.data.models.Tax
 import com.google.firebase.auth.FirebaseUser
 import com.invoice.app.data.auth.AuthRepository
+import com.invoice.app.data.home.DashboardRepository
+import com.invoice.app.data.home.MyBusinessRepository
+import com.invoice.app.data.models.Dashboard
+import com.invoice.app.ui.auth.home.mybusinesses.MyBusinessesViewModel
 
 /*
 * Currently there is a problem with *Jetpack Compose Preview* & *Hilt*
@@ -25,10 +29,40 @@ object FakeViewModelProvider {
 
     fun provideInvoicesViewModel() = InvoicesViewModel(invoiceRepo, customersRepo)
 
+    fun provideMyBusinessesViewModel() = MyBusinessesViewModel(businessRepo)
+
     fun provideCustomersViewModel() = CustomersViewModel(customersRepo)
 
     fun provideAuthViewModel() = AuthViewModel(authRepo)
 
+    private val dashboardRepo = object : DashboardRepository {
+        override suspend fun getDashboardInfo(): Resource<Dashboard> {
+            TODO("Not yet implemented")
+        }
+    }
+
+
+    private val businessRepo = object : MyBusinessRepository {
+        override suspend fun getMyBusinesses(): Resource<List<Business>> {
+            TODO("Not yet implemented")
+        }
+
+        override suspend fun canAddBusiness(): Boolean {
+            TODO("Not yet implemented")
+        }
+
+        override suspend fun addMyBusiness(business: Business): Resource<Business> {
+            TODO("Not yet implemented")
+        }
+
+        override suspend fun updateMyBusiness(business: Business): Resource<Business> {
+            TODO("Not yet implemented")
+        }
+
+        override suspend fun deleteMyBusiness(id: String): Resource<Boolean> {
+            TODO("Not yet implemented")
+        }
+    }
 
     private val invoiceRepo = object : InvoiceRepository {
         override suspend fun getInvoices(): Resource<List<Invoice>> {
