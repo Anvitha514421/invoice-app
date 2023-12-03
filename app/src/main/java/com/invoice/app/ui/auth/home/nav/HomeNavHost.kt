@@ -66,7 +66,7 @@ fun HomeNavHost() {
                         composable(AppScreen.Dashboard.route) { DashboardScreen(hiltViewModel()) }
                         invoiceNav(navController)
                        // taxNav(navController)
-                       // businessNav(navController)
+                        businessNav(navController)
                         customersNav(navController)
                     }
                 }
