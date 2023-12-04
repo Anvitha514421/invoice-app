@@ -15,8 +15,8 @@ import com.invoice.app.data.home.InvoiceRepository
 import com.invoice.app.data.home.InvoiceRepositoryImpl
 import com.invoice.app.data.home.MyBusinessRepository
 import com.invoice.app.data.home.MyBusinessRepositoryImpl
-//import com.invoice.app.data.home.TaxRepository
-//import com.invoice.app.data.home.TaxRepositoryImpl
+import com.invoice.app.data.home.TaxRepository
+import com.invoice.app.data.home.TaxRepositoryImpl
 import com.google.firebase.firestore.FirebaseFirestore
 import com.invoice.app.data.auth.AuthRepository
 
@@ -39,6 +39,8 @@ class AppModule {
     @Provides
     fun provideCustomersRepository(impl: CustomersRepositoryImpl): CustomersRepository = impl
 
+    @Provides
+    fun provideTaxRepository(impl: TaxRepositoryImpl): TaxRepository = impl
 
     @Provides
     fun provideInvoiceRepository(impl: InvoiceRepositoryImpl): InvoiceRepository = impl
