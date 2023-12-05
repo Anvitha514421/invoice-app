@@ -4,6 +4,7 @@ import com.invoice.app.data.Resource
 import com.invoice.app.ui.auth.AuthViewModel
 import com.invoice.app.ui.auth.home.customers.CustomersViewModel
 import com.invoice.app.ui.auth.home.dashboard.DashboardViewModel
+import com.invoice.app.ui.auth.home.invoices.InvoicesViewModel
 import com.invoice.app.ui.auth.home.mybusinesses.MyBusinessesViewModel
 import com.invoice.app.ui.auth.home.taxes.TaxesViewModel
 import com.invoice.app.data.home.CustomersRepository
@@ -29,7 +30,7 @@ object FakeViewModelProvider {
 
     fun provideDashboardViewModel() = DashboardViewModel(dashboardRepo)
 
-   // fun provideInvoicesViewModel() = InvoicesViewModel(invoiceRepo, businessRepo, customersRepo, taxRepo)
+    fun provideInvoicesViewModel() = InvoicesViewModel(invoiceRepo, businessRepo, customersRepo, taxRepo)
 
     fun provideTaxesViewModel() = TaxesViewModel(taxRepo)
 
