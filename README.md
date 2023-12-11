@@ -20,6 +20,7 @@ You need `google-services.json` to make this project work.
 In the event that no data exists, one would create them in their respective screens. 
 
 They includes 
+
  **Creating a customer**
 
  **Creating a business**
