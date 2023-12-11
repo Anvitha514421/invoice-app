@@ -4,9 +4,6 @@ It is an application to create and manage invoices. One need to create an accoun
 application. Once logged in they will view a dashboard highlighting some statistics if the data 
 exists. 
 
-<p align="center">
-  <img src="./images/MainNav.jpeg" alt="mainnav" style="width:200px;"/>
-</p>
 
 You need `google-services.json` to make this project work.
 
@@ -24,21 +21,10 @@ In the event that no data exists, one would create them in their respective scre
 
 They includes 
  **Creating a customer**
-<p align="center">
-  <img src="./images/Customers.jpeg" alt="customers" style="width:200px;"/>
-</p>
 
  **Creating a business**
-<p align="center">
-  <img src="./images/Biz.jpeg" alt="businesses" style="width:200px;"/>
-</p>
 
  **Creating a tax** 
-<p align="center">
-  <img src="./images/Tax.jpeg" alt="Tax" style="width:200px;" />
-</p>
 
  **Creating an invoice**
-<p align="center">
-  <img src="./images/Invoices.jpeg" alt="Invoices" style="width:200px;"/>
-</p>
+
