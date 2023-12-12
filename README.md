@@ -21,7 +21,7 @@ In the event that no data exists, one would create them in their respective scre
 
 This includes 
 
-**Creating a dashboard :#
+**Creating a dashboard**
  In this dashboard screen we can see the below details:
 
 •	The total number of invoices generated.
@@ -30,7 +30,6 @@ This includes
 •	Number of pending invoices.
 •	Pending Amount.
 
-**
 
  **Creating a customer**
  
