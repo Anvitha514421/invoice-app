@@ -32,25 +32,25 @@ This includes
 
 **
 
- **Creating a customer:
+ **Creating a customer**
  
    The Business owners must add the customers to this screen by specifying their name, address, contact and email. 
-   The list of all the customers can be seen on this screen. The business owners can add/update and delete the customer.**
+   The list of all the customers can be seen on this screen. The business owners can add/update and delete the customer.
 
- **Creating a business:
+ **Creating a busines**
  
  The business screen is for the business owners to add their businesses. 
  This app allows the owners to add up to 5 businesses. The customers can be added to their respective business areas.
  The owners can add, update and delete the business at any point in time.
-**
 
- **Creating a tax:
+
+ **Creating a tax**
  
  The owners must specify and manage the type and percent of tax they are applying to the customers on their business.
- ** 
+ 
 
- **Creating an invoice:
+ **Creating an invoice**
  
  The invoices are generated to the customers based on the quantity of the items purchased, the price of the item and the tax. 
- **
+ 
 
